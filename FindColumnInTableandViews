@@ -1,6 +1,4 @@
-SELECT      COLUMN_NAME AS 'ColumnName'
-            ,TABLE_NAME AS  'TableName'
+SELECT      COLUMN_NAME,TABLE_NAME, TABLE_SCHEMA
 FROM        INFORMATION_SCHEMA.COLUMNS
-WHERE       COLUMN_NAME LIKE '%MyName%'
-ORDER BY    TableName
-            ,ColumnName;
+WHERE       COLUMN_NAME LIKE '%vpo_number%'
+ORDER BY    TABLE_NAME ASC
