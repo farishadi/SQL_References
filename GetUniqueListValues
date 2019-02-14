@@ -1,0 +1,21 @@
+--This query gets a list of data based on *variable, then checks the list to ensure that each 
+--instance of *variable only has a single row of data, trimmed based on *trim_criterea
+--*variable = material_id
+--*trim_criterea = datetime
+
+WITH tab AS (
+	
+	-- Original Query goes here
+  -- Query that gets a long list of data
+	
+)
+
+-- trimming the list produced from the query based on the *trim_criterea happens below
+SELECT tab.* 
+FROM tab
+JOIN 
+	(SELECT material_id , max(datetime) max_date
+	FROM tab
+	GROUP BY material_id) AS t
+ON t.material_id = tab.material_id AND
+(t.max_date=tab.datetime or tab.datetime IS NULL)
