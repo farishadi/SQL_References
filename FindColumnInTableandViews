@@ -19,7 +19,7 @@ ORDER BY	C1.TABLE_NAME ASC
 
 
 --FOR TERADATA
-SELECT TableName
+SELECT ColumnName, TableName
 FROM DBC.COLUMNSV
 WHERE DatabaseName = 'FARISHADI' and
-ColumnName like 'FT_%' 
+ColumnName like 'ColumnName' 
